@@ -1,0 +1,21 @@
+<p>two-way-db works!</p>
+<h2>Two way data binding</h2>
+
+<!--<div>
+    <label for="id1">first Name</label>
+    <input type="text" name="fname" id="id1" [value]="firstName" (input)="fnamechange($event)">
+</div>
+{{firstName}}-->
+<br>
+<div>
+    <label for="id1">first Name</label>
+    <input type="text" name="fname" id="id1" [(ngModel)]="firstName">
+</div>
+<div>
+    <label for="id2">mobile Number</label>
+    <input type="text" name="mNumber" id="id2" [(ngModel)]="mobileNumber">
+</div>
+{{firstName}}
+<div>
+    <button type="button" (click)="save()">save</button>
+</div>

@@ -1,0 +1,28 @@
+<h2>structural-direct works!   *ngFor</h2>
+<!--<ul>
+    <li *ngFor="let item of courses">{{item}}</li>
+</ul>
+using index
+<ul>
+    <li *ngFor="let item of courses; let i=index">{{i+1}}-{{item}}</li>
+</ul>-->
+<div class="container">
+    <table class="table table-borderd text-center">
+      <thead>
+            <tr>
+              <th scope="col">sr.no</th>
+              <th scope="col">product name</th>
+              <th scope="col">price</th>
+              <th scope="col">quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let product of products;let i=index" [ngStyle]="{'background-color':product.price>60000 ? 'grey':'blue'}">
+              <th>{{i+1}}</th>
+              <td>{{product.productName}}</td>
+              <td>{{product.price}}</td>
+              <td>{{product.quantity}}</td>
+        </tr>
+          </tbody>
+    </table>
+  </div>

@@ -1,0 +1,55 @@
+<p>calculate works!</p>
+<h2>add,sub,multiply,div with 3 input</h2>
+<div>
+<label for="id1">number1=</label>
+<input type="number" name="num" id="id1" [(ngModel)]="number1">
+</div>
+<br>
+<div>
+    <label for="id2">number2=</label>
+    <input type="number" name="num" id="id2" [(ngModel)]="number2">
+    </div>
+    <br>
+<div>
+    <button type="button"(click)="add()">add</button>
+    <button type="button"(click)="sub()">substract</button>
+    <button type="button"(click)="multiply()">multiply</button>
+    <button type="button"(click)="divide()">divide</button>
+</div>
+<div>
+    <label for="id3">result=</label>
+    <input type="number" name="result" id="id3" [(ngModel)]="result">
+    </div>
+    <br>
+    <br>
+    <h2>price,quantity,extra discount and total,no button</h2>
+    <div>
+        <label for="id4">price=</label>
+        <input type="text" name="price" id="id4" [(ngModel)]="price" (input)="totalp()">
+        </div>
+        <div>
+            <label for="id5">quantity=</label>
+            <input type="text" name="qty" id="id5" [(ngModel)]="quantity" (input)="totalp()">
+            </div>
+            <div>
+                <label for="id6">discount=</label>
+                <input type="text" name="discount" id="id6" [(ngModel)]="discount" (input)="totalp()">
+                </div>
+                <div>
+                    <label for="id7">totalprice=</label>
+                    <input type="text" name="totalp" id="id7" [(ngModel)]="totalp">
+                    </div>
+
+
+
+<h1>calculate Age</h1>
+
+<label for="id8">name</label>
+<input type="text" name="name" id="id8" [(ngModel)]="name">&nbsp;
+<label for="id8">mobile no:</label>
+<input type="text" name="mnumber" id="id9" [(ngModel)]="mobileno">&nbsp;
+<label for="id8">Date of birth:</label>
+<input type="text" name="bdate" id="id10" [(ngModel)]="birthdate" (change)="calculateAge()">&nbsp;
+<label for="id8">Age:</label>
+<input type="text" name="age" id="id11" [(ngModel)]="age" (ngModelChange)="calculateAge()" disabled>
+

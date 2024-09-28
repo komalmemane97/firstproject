@@ -1,0 +1,34 @@
+<p>directive-practice works!</p>
+  <div *ngIf="age>=18">
+    <h3>you are eligible for vote.</h3>
+  </div>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo, ipsam non! Accusamus sed atque ipsum animi magnam repellat ducimus incidunt.</p>
+  <p *ngIf="isshow">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, optio!</p>
+ 
+  <button type="button" *ngIf="!isshow" (click)="diaplayMoreContent()">Read More</button>
+  <button type="button" *ngIf="isshow" (click)="removeContent()">hide</button>
+
+  <hr>
+
+  <h3>ngIf else example </h3>
+  <div *ngIf="!isLoggedIn;else logoutBlock">
+  <button type="button"  (click)="login()">login</button> &nbsp;
+</div>  <br>
+
+<ng-template #logoutBlock>
+  <button type="button"  (click)="logout()">logout</button>
+</ng-template>
+
+<hr>
+<h4> ng IfThen Else block</h4>
+<div *ngIf="!isLoggedIn;then loginBlock; else logoutBlock"></div>
+   
+<ng-template #loginBlock>
+    <h2>login</h2>
+    <button type="button"  (click)="login()">login</button>&nbsp;
+</ng-template>
+
+<ng-template #logoutBlock>
+    <h3>logout</h3>
+    <button type="button"  (click)="logout()">logout</button>
+</ng-template>

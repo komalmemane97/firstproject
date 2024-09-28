@@ -1,0 +1,28 @@
+<p>ngswitch-example works!</p>
+
+<button type="button"  (click)="updateStatus('pending')">pending</button>
+<button type="button"  (click)="updateStatus('shipped')">shipeed</button>
+<button type="button"  (click)="updateStatus('delivered')">delivered</button>
+
+
+
+<div class="container border" [ngSwitch]="orderStatus">
+<div *ngSwitchCase="'pending'">
+    <h5>your order is pending</h5>
+</div>
+<div *ngSwitchCase="'processing'">
+    <h5>your order is being processed</h5>
+</div>
+<div *ngSwitchCase="'shipped'">
+    <h5>your order is being shipeed</h5>
+</div>
+<div *ngSwitchCase="'delivered'">
+    <h5>your order is being delivered</h5>
+</div>
+<div *ngSwitchCase="'cancelled'">
+    <h5>your order is being cancelled</h5>
+</div>
+<div *ngSwitchDefault>
+    <h5>unknow status</h5>
+</div>
+</div>
