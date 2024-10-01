@@ -8,11 +8,12 @@ import { HeaderComponent } from './header/header.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { TwoWayDbComponent } from './two-way-db/two-way-db.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CalculateComponent } from './calculate/calculate.component';
 import { DirectivePracticeComponent } from './directive-practice/directive-practice.component';
 import { StructuralDirectComponent } from './structural-direct/structural-direct.component';
 import { NgswitchExampleComponent } from './ngswitch-example/ngswitch-example.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +26,14 @@ import { NgswitchExampleComponent } from './ngswitch-example/ngswitch-example.co
     CalculateComponent,
     DirectivePracticeComponent,
     StructuralDirectComponent,
-    NgswitchExampleComponent
+    NgswitchExampleComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
